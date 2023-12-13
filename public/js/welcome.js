@@ -61470,7 +61470,10 @@ var render = function () {
             "div",
             {
               staticClass: "card w-100 border-0 overlay-bg img-hover mb-3 p-3",
-              staticStyle: { "background-size": "cover" },
+              staticStyle: {
+                "background-size": "cover",
+                "margin-left": "11px",
+              },
               style: {
                 "background-image":
                   "url(/storage/" + JSON.parse(item.venues[0].images)[0] + ")",
