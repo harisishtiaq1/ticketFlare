@@ -1108,11 +1108,9 @@ return [
     'minutes' => 'Minutes',
     'seconds' => 'Seconds',
     'checkout_timer' => 'Please checkout within ',
-    
     'popular_in'    => 'Popular in',
     'top_destinations'    => 'Top Venues',
     'popular_cities'    => 'Popular Cities',
     'events_in'         => 'Events In',
-
-
+    "things_to_do_in" => "Things to do in"
 ];

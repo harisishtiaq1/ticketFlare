@@ -398,14 +398,14 @@
                         </div>
                     </div>
 
-                    <div class="d-flex flex-wrap flex-justifiy-content-start align-item-center gap-2 mt-3">
+                    <div class="d-flex flex-wrap flex-justify-content-start align-items-center gap-2 mt-3">
                         @foreach ($cities_events as $key => $item)
                             <div class="bg-white badge fw-semibold py-1 px-4">
-
                                 <a class="text-dark text-wrap lh-sm"
-                                    href="{{ route('eventmie.venues.index', ['search' => urlencode($item->venues[0]->city)]) }}">{{ $item->venues[0]->title }}&nbsp;({{ $item->venues[0]->city }})&emsp;<i
-                                        class="fa-solid fa-arrow-trend-up"></i></a>
-
+                                    href="{{ route('eventmie.venues.index', ['search' => urlencode($item->venues[0]->city)]) }}">
+                                    @lang('eventmie-pro::em.things_to_do_in') {{ $item->venues[0]->title }}&nbsp;({{ $item->venues[0]->city }})&emsp;<i
+                                        class="fa-solid fa-arrow-trend-up"></i>
+                                </a>
                             </div>
                         @endforeach
                     </div>
