@@ -123,6 +123,8 @@
                 <div class="flex-fill d-flex justify-center-evenly">
                     <span class="down-arrow align-self-center me-3 pointer" id="down-arrow">
                         <i class="fa-solid fa-angle-down text-primary fs-5"></i></span>
+                        {{-- @dd($cities_events) --}}
+
                     <select
                         class="form-select  border-0  border-bottom rounded-0 form-focus-none bg-transparent custom-select"
                         id="popular_city" name="popular_city">
@@ -151,7 +153,6 @@
             <div id="events-container">
                 @component('eventmie::skeleton.event')
                 @endcomponent
-
                 <event-listing :events="{{ json_encode($featured_events, JSON_HEX_APOS) }}"
                     :currency="{{ json_encode($currency, JSON_HEX_APOS) }}" :item_count="{{ 3 }}"
                     :date_format="{{ json_encode(

@@ -1110,7 +1110,7 @@ return [
     'checkout_timer' => 'Please checkout within ',
     
     'popular_in'    => 'Popular in',
-    'top_destinations'    => 'Top Destinations',
+    'top_destinations'    => 'Top Venues',
     'popular_cities'    => 'Popular Cities',
     'events_in'         => 'Events In',
 

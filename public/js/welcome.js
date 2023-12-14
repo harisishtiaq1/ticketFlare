@@ -61465,7 +61465,7 @@ var render = function () {
               staticClass: "card w-100 border-0 overlay-bg img-hover mb-3 p-3",
               staticStyle: {
                 "background-size": "cover",
-                "margin-left": "11px",
+                "margin-right": "11px",
               },
               style: {
                 "background-image":

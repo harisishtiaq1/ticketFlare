@@ -18,7 +18,7 @@
         <div
           class="card w-100 border-0 overlay-bg img-hover mb-3 p-3"
           :style="{ 'background-image': 'url(/storage/' + JSON.parse(item.venues[0].images)[0] + ')'}"
-          style="background-size: cover;margin-left: 11px;"
+          style="background-size: cover;margin-right: 11px;"
         >
           <span class="single-name"></span>
           <div class="z-1">
