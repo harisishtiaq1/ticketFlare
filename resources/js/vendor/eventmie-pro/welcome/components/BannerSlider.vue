@@ -1,8 +1,5 @@
 <template>
     <carousel
-        :autoplay="true"
-        :autoplayTimeout="1000"
-        :scrollPerPage="true"
         :perPage="1"
         :paginationEnabled="true"
         :rtl="dir"
@@ -19,7 +16,7 @@
                 <div class="container-fluid p-0">
                     <div class="w-100 rounded-0 overlay-bg mt-lg-0 mt-8">
                         <img
-                            style="width:100%;height:auto"
+                            style="width:100%;height:auto;background-size: cover;"
                             class="cover-img rounded-0"
                             :src="'/storage/' + item.image"
                             :alt="item.title"

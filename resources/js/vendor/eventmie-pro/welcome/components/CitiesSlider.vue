@@ -22,7 +22,7 @@
         >
           <span class="single-name"></span>
           <div class="z-1">
-            <h3 class="text-white mb-0 text-wrap text-start">{{ item.venues[0].title }}</h3>
+            <h3 style="position: absolute;bottom: 12px;" class="text-white mb-0 text-wrap text-start">{{ item.venues[0].title }}</h3>
           </div>
           <a :href="eventSlug(item.venues[0].city)" class="stretched-link"></a>
         </div>
@@ -34,7 +34,9 @@
   margin-bottom:35px!important;
   width: 84%!important;
 }
-
+.cities-paginate .VueCarousel-wrapper .VueCarousel-inner{
+  height: 280px !important;
+}
 </style>
 
 <script>

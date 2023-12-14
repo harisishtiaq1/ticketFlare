@@ -134,7 +134,6 @@
                             </option>
                         @endforeach
                     </select>
-
                 </div>
             </div>
             <div class="row">
@@ -147,8 +146,9 @@
                             class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
+            {{-- @dd($featured_events) --}}
             @if ($featured_events->isNotEmpty())
-
+            <div id="events-container">
                 @component('eventmie::skeleton.event')
                 @endcomponent
 
@@ -162,21 +162,41 @@
                         JSON_HEX_APOS,
                     ) }}">
                 </event-listing>
-            @else
-                <div class="row">
-                    <div class="col-12">
-                        <h4 class="heading text-center mt-30">
-                            <i class="fas fa-exclamation-triangle"></i> Events not found
-                        </h4>
-                    </div>
+            </div>
+        @else
+            <div class="row">
+                <div class="col-12">
+                    <h4 class="heading text-center mt-30">
+                        <i class="fas fa-exclamation-triangle"></i> Events not found
+                    </h4>
                 </div>
-            @endif
+            </div>
+        @endif
 
         </div>
     </div>
 
 
+    <script>
+        document.getElementById('popular_city').addEventListener('change', function () {
+            var selectedCity = this.value;
+            var eventsContainer = document.getElementById('events-container');
 
+            // Use AJAX or any other method to fetch events for the selected city from the server
+            // Update the eventsContainer content with the new events
+
+            // For example (using jQuery for simplicity):
+            $.ajax({
+                url: '/path/to/your/events/endpoint?city=' + selectedCity,
+                success: function (data) {
+                    eventsContainer.innerHTML = data;
+                },
+                error: function () {
+                    eventsContainer.innerHTML = '<div class="row"><div class="col-12"><h4 class="heading text-center mt-30"><i class="fas fa-exclamation-triangle"></i> Events not found</h4></div></div>';
+                }
+            });
+        });
+    </script>
     <!-- New Themes Event Featured Start -->
     {{-- @if ($featured_events->isNotEmpty())
         <div class="py-5">

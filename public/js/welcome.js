@@ -2957,9 +2957,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 
 Vue.prototype.base_url = window.base_url;
@@ -3116,7 +3113,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 Vue.prototype.base_url = window.base_url;
@@ -3187,6 +3183,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue_carousel__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-carousel */ "./node_modules/vue-carousel/dist/vue-carousel.min.js");
 /* harmony import */ var vue_carousel__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_carousel__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
 //
 //
 //
@@ -4080,7 +4078,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.cities-paginate .VueCarousel-pagination{\r\n  margin-bottom:35px!important;\r\n  width: 84%!important;\n}\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.cities-paginate .VueCarousel-pagination{\r\n  margin-bottom:35px!important;\r\n  width: 84%!important;\n}\n.cities-paginate .VueCarousel-wrapper .VueCarousel-inner{\r\n  height: 280px !important;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -61194,14 +61192,7 @@ var render = function () {
     "carousel",
     {
       class: "banner-pagination",
-      attrs: {
-        autoplay: true,
-        autoplayTimeout: 1000,
-        scrollPerPage: true,
-        perPage: 1,
-        paginationEnabled: true,
-        rtl: _vm.dir,
-      },
+      attrs: { perPage: 1, paginationEnabled: true, rtl: _vm.dir },
     },
     _vm._l(_vm.banners, function (item, index) {
       return _c(
@@ -61220,7 +61211,11 @@ var render = function () {
                 [
                   _c("img", {
                     staticClass: "cover-img rounded-0",
-                    staticStyle: { width: "100%", height: "auto" },
+                    staticStyle: {
+                      width: "100%",
+                      height: "auto",
+                      "background-size": "cover",
+                    },
                     attrs: { src: "/storage/" + item.image, alt: item.title },
                   }),
                   _vm._v(" "),
@@ -61367,8 +61362,6 @@ var render = function () {
         {
           class: "categories-paninate d-flex px-lg-5 px-3 p-0 m-0",
           attrs: {
-            autoplay: true,
-            autoplayTimeout: 1000,
             perPage: _vm.local_item_count,
             paginationEnabled: true,
             rtl: _vm.dir,
@@ -61485,7 +61478,10 @@ var render = function () {
               _c("div", { staticClass: "z-1" }, [
                 _c(
                   "h3",
-                  { staticClass: "text-white mb-0 text-wrap text-start" },
+                  {
+                    staticClass: "text-white mb-0 text-wrap text-start",
+                    staticStyle: { position: "absolute", bottom: "12px" },
+                  },
                   [_vm._v(_vm._s(item.venues[0].title))]
                 ),
               ]),

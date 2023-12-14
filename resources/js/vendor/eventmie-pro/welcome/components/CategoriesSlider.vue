@@ -1,8 +1,7 @@
 <template>
     <div>
         <carousel
-        :autoplay="true"
-        :autoplayTimeout="1000"
+       
         :perPage="local_item_count"
         :paginationEnabled="true"
         :rtl="dir"
